@@ -35,13 +35,12 @@ def seuil_rentabilite(x):
     seuil = 100000  
     
     if x['Seasonal'] == 1:
-        seuil *= 0.9  # Réduire le seuil pour les produits saisonniers
+        seuil *= 0.9  #
     
     if x['ProductPosition'] == 1:
-        seuil *= 1.2  # Augmenter le seuil pour les produits en fin de rayon
-
-    if x['section'] == 1:  # Si c'est un produit féminin (exemple)
-        seuil *= 1.1  # Augmenter encore pour les produits dans la section "femme"
+        seuil *= 1.2  
+    if x['section'] == 1:  
+        seuil *= 1.1  
     
     return seuil
 
@@ -86,8 +85,8 @@ else:
      if prediction[0] == 0:
             st.write("Suggestions pour rendre le produit plus rentable :")
             
-            if price < 150:
-                st.write("Augmenter le prix du produit pourrait améliorer la rentabilité. Essayer un prix supérieur à 150.")
+            if price < 100:
+                st.write("Augmenter le prix du produit pourrait améliorer la rentabilité. Essayer un prix supérieur.")
             
             if SalesVolume < 200:
                 st.write("Augmenter le volume de vente en mettant en place des promotions ou des campagnes marketing.")
