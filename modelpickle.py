@@ -15,7 +15,7 @@ st.title("ML POUR LA RENTABILITE D'UN PRODUIT VESTIMENTAIRE VENDU EN MAGASIN")
 ProductPosition = st.selectbox("Position du produit en magasin", db['ProductPosition'].unique())
 Seasonal = st.selectbox("Produit saisonnier", db['Seasonal'].unique())
 SalesVolume = st.number_input("Volume de vente", min_value=1, value=2)
-price = st.number_input("Prix", min_value=1.0, value=1.00)
+price = st.number_input("Prix en $", min_value=1.0, value=1.00)
 term = st.text_input("Vetement", "")
 section = st.selectbox("Section (MAN/WOMAN)", db['section'].unique())
 
