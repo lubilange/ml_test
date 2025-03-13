@@ -11,7 +11,7 @@ with open('zara.pkl', 'rb') as f:
 with open('scaler.pkl', 'rb') as s:
     scaler = pickle.load(s)
 
-st.title("ML POUR LA RENTABILITE D'UN PRODUIT VENDU EN MAGASIN")
+st.title("ML POUR LA RENTABILITE D'UN PRODUIT VESTIMENTAIRE VENDU EN MAGASIN")
 ProductPosition = st.selectbox("Position du produit en magasin", db['ProductPosition'].unique())
 Seasonal = st.selectbox("Produit saisonnier", db['Seasonal'].unique())
 SalesVolume = st.number_input("Volume de vente", min_value=1, value=2)
