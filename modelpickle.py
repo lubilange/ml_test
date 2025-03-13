@@ -16,7 +16,7 @@ ProductPosition = st.selectbox("Position du produit en magasin", db['ProductPosi
 Seasonal = st.selectbox("Produit saisonnier", db['Seasonal'].unique())
 SalesVolume = st.number_input("Volume de vente", min_value=1, value=2)
 price = st.number_input("Prix en $", min_value=1.0, value=1.00)
-term = st.text_input("Vêtement", "")
+term = st.text_input("Vêtement(ex: t-shirt,robe, etc)", "")
 section = st.selectbox("Section (MAN/WOMAN)", db['section'].unique())
 
 if not term or ProductPosition is None or Seasonal is None or SalesVolume is None or price is None or section is None:
