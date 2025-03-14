@@ -13,8 +13,7 @@ with open('scaler.pkl', 'rb') as s:
 
 st.title("ML POUR LA RENTABILITE D'UN PRODUIT VESTIMENTAIRE VENDU EN MAGASIN")
 st.subheader("""choix de position :
-End-cap → Extrémité d'une allée/
-/Front of the store → Entrée du magasin ou Façade du magasin
+End-cap → Extrémité d'une allée/Front of the store → Entrée du magasin ou Façade du magasin/
 Aisle → Allée""")
 ProductPosition = st.selectbox("Position du produit en magasin", db['ProductPosition'].unique())
 st.subheader("""Choix sur le produit saisonier : YES→ OUI / NO → NON""")
