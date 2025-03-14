@@ -12,7 +12,7 @@ with open('scaler.pkl', 'rb') as s:
     scaler = pickle.load(s)
 
 st.title("ML POUR LA RENTABILITE D'UN PRODUIT VESTIMENTAIRE VENDU EN MAGASIN")
-St.title("choix de position :
+st.title("choix de position :
 End-cap → Extrémité d'une allée/
 /Front of the store → Entrée du magasin ou Façade du magasin
 Aisle → Allée")
