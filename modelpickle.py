@@ -37,7 +37,7 @@ else:
 db['revenu'] = db['price'] * db['SalesVolume']
 revenu = price * SalesVolume
 def seuil_rentabilite(x):
-    seuil = 100000  
+    seuil = 1000  
     
     if x['Seasonal'] == 1:
         seuil *= 0.9  #
