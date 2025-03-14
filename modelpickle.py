@@ -12,17 +12,17 @@ with open('scaler.pkl', 'rb') as s:
     scaler = pickle.load(s)
 
 st.title("ML POUR LA RENTABILITE D'UN PRODUIT VESTIMENTAIRE VENDU EN MAGASIN")
-st.title("choix de position :
+st.subheader("choix de position :
 End-cap → Extrémité d'une allée/
 /Front of the store → Entrée du magasin ou Façade du magasin
 Aisle → Allée")
 ProductPosition = st.selectbox("Position du produit en magasin", db['ProductPosition'].unique())
-St.title("Choix sur le produit saisonier : YES→ OUI / NO → NON")
+st.subheader("Choix sur le produit saisonier : YES→ OUI / NO → NON")
 Seasonal = st.selectbox("Produit saisonnier", db['Seasonal'].unique())
 SalesVolume = st.number_input("Volume de vente", min_value=1, value=2)
 price = st.number_input("Prix en $", min_value=1.0, value=1.00)
 term = st.text_input("Vêtement(ex: t-shirt,robe, etc)", "")
-St.title("Choix de section: MAN → HOMME / WOMAN → FEMME")
+st.subheader("Choix de section: MAN → HOMME / WOMAN → FEMME")
 section = st.selectbox("Section (MAN/WOMAN)", db['section'].unique())
 
 if not term or ProductPosition is None or Seasonal is None or SalesVolume is None or price is None or section is None:
